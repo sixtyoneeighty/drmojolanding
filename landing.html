@@ -1,0 +1,28 @@
+<section data-bs-version="5.1" class="header18" group="Headers" data-bg-video="{{bg.type == 'video' && bg.value.url}}" mbr-class="{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}">
+  <mbr-parameters>
+    <header>Size</header>
+    <input type="checkbox" title="Full Screen" name="fullScreen" checked>
+    <input type="checkbox" title="Full Width" name="fullWidth" checked>
+    <input type="range" inline title="Top" name="paddingTop" min="0" max="24" step="1" value="20" condition="fullScreen == false">
+    <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="12" step="1" value="4" condition="fullScreen == false">
+    <input type="range" inline title="Content Width" name="contentWidth" min="3" max="12" step="1" value="12">
+    <header>Show / Hide</header>
+    <input type="checkbox" title="Title" name="showTitle" checked>
+    <input type="checkbox" title="Subtitle" name="showSubtitle">
+    <input type="checkbox" title="Text" name="showText" checked>
+    <input type="checkbox" title="Buttons" name="showButtons" checked>
+    <select title="Vertical Align" name="verticalAlign" condition="fullScreen">
+      <option value="flex-start">Top</option>
+      <option value="center">Center</option>
+      <option value="flex-end" selected>Bottom</option>
+    </select>
+    <select title="Horizontal Align" name="horizontalAlign">
+      <option value="flex-start" selected>Left</option>
+      <option value="center">Center</option>
+      <option value="flex-end">Right</option>
+    </select>
+    <header>Background</header>
+    <fieldset type="background" name="bg" parallax>
+      <input type="image" title="Image" value="../_images/background17.jpg" parallax>
+      <input type="video" title="Video" value="https://www.youtube.com/embed/MxXmxW8MTzc?autoplay=1&loop=1&playlist=Y7g0A-TPMi4&t=20&mute=1&playsinline=1&controls=0&showinfo=0&autohide=1&allowfullscreen=true&mode=transparent" selected>
+      <input type="color" title="Color" value="#260a30">
