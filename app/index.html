@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React TypeScript App</title>
+    
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- TypeScript -->
+    <script src="https://unpkg.com/typescript@latest/lib/typescript.js"></script>
+    
+    <!-- Babel for JSX/TSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- Your TSX files -->
+    <script type="text/babel" data-type="module">
+        import AppLayout from './app_layout.tsx';
+        import AppPage from './app_page.tsx';
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(
+            <React.StrictMode>
+                <AppLayout>
+                    <AppPage />
+                </AppLayout>
+            </React.StrictMode>
+        );
+    </script>
+</body>
+</html>
